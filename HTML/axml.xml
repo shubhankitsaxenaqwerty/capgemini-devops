@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Students xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="demo2.xsd">
+<student>
+<studentname>Jeson</studentname>
+<age>28</age>
+</student>
+<student>
+<studentname>Devyani</studentname>
+<age>28</age>
+</student>
+</Students>

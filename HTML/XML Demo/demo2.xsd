@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+ <!-- definition of simple elements -->
+      <xs:element name="age" type="xs:positiveInteger" />
+      <xs:element name="studentname" type="xs:string" />
+               	
+	<!--*************Restrictions For Data***********-->
+	
+	<!-- The Ref_name first letter should be capital -->			
+	
+    <xs:simpleType name="studentname">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z][a-z]{1,}"/>
+    </xs:restriction>
+    </xs:simpleType>
+   
+	
+	<!-- To Enter only 3 digits in age field -->	
+	<xs:simpleType name="age">
+       <xs:restriction base="xs:positiveInteger">
+  		  <xs:minInclusive value="1"/> 
+		<xs:maxInclusive value="120"/>
+       </xs:restriction>
+     </xs:simpleType> 
+	 
+	
+	<xs:element name="student">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="studentname"/>
+				<xs:element ref="age"/>
+			</xs:sequence>
+		</xs:complexType> 
+	</xs:element>
+
+	<xs:element name="Students">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="student" maxOccurs="6"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>		
+</xs:schema>

@@ -1,0 +1,11 @@
+@CHARSET "ISO-8859-1";
+
+table{
+          align:center;
+        bordercolor: black;
+        background: gray;
+        font-family: Arial;
+          border: 6;
+
+	color: blue;
+}

@@ -1,0 +1,5 @@
+create or replace procedure emp_procedure(name IN varchar,design IN varchar2,city IN varchar2,salary IN number)
+as
+begin
+insert into emp_table values (emp_sequence.nextval,name,design,city,salary);
+end;
